@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Server Test Page</h1>
+        <p class="success">Congratulations! Your server is up and running if you see this page.</p>
+        <p>Current Time: <span id="time"></span></p>
+        <h2>Test Form</h2>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // Display current server time
+        document.getElementById("time").textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
